@@ -7,3 +7,15 @@ var Player = function(x,y) {
     this.color = '#fff';
 };
 
+Player.prototype.canMove = function(tileType) {
+    
+    switch(tileType)
+    {
+        case 'grass':
+            return true;
+        default:
+            console.log('Player cannot walk on ' + tileType)
+            return false;
+    }
+};
+
